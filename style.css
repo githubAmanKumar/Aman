@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Jost:ital,wght@1,200&family=Poppins:wght@700&family=Roboto&family=Ubuntu&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu;
+    /* Baloo Bhaina
+    Jost
+    Poppins
+    Roboto
+    Ubuntu
+    Varela Round */
+
+}
+
+*::selection {
+    color: black;
+    background: white;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+html,
+body {
+    background: transparent;
+    color: white;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    /* height: 100%; */
+}
+
+
+#homepage {
+    background-size: 100% 100%;
+    color: black;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    padding-left: 10%;
+
+
+    #homeHeadings {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        gap: 1vw;
+        color: black;
+    }
+
+    #homeHeadings h1 {
+        position: relative;
+        font-size: 4vw;
+        font-weight: bold;
+        letter-spacing: -0.2vw;
+        -webkit-text-stroke: 0.5px white;
+    }
+
+    #homeHeadings h2 {
+        position: relative;
+        font-size: 5vw;
+        font-weight: bold;
+        letter-spacing: -0.2vw;
+        font-family: Jost;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #homeHeadings h2 p {
+        font-size: 1.5vw;
+        font-weight: 100;
+        letter-spacing: normal;
+        font-family: Jost;
+        color: white;
+        padding: 2px 8px;
+        opacity: 0;
+    }
+}
+
+#about {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 3vw;
+    color: white;
+
+    p {
+        width: 50vw;
+        font-size: 2vw;
+        font-family: Ubuntu;
+        line-height: 30px;
+    }
+}
+
+#skills {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    font-size: 5vw;
+    position: relative;
+    padding: 10%;
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    #skillsHeadings {
+        height: 3vw;
+        padding: 0;
+    }
+
+    #skillsHeadings h2 {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        font-size: 2vw;
+    }
+
+    .skillsLogo {
+        font-size: 3vw;
+        margin: 0 10px;
+    }
+
+    .skillsLogo svg {
+        filter: grayscale();
+    }
+
+}
+
+#projects {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    h3 {
+        color: white;
+        position: absolute;
+        top: 20%;
+        font-size: 3vw;
+    }
+
+    .card {
+        width: 15vw;
+        height: 20vw;
+    }
+
+    .card img {
+        width: 100%;
+        height: 90%;
+    }
+
+    .card a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* text-decoration: none; */
+        color: black;
+        background: white;
+        border-radius: 20px;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .card a:hover {
+        opacity: 0.5;
+    }
+}
+
+#contact {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    h6 {
+        font-size: 4vw;
+        width: 40vw;
+    }
+
+    #contactLinks {
+        width: 20vw;
+        height: 20vw;
+        background-color: grey;
+        display: flex;align-items: center;justify-content: center;
+        flex-direction: column; gap: 50px;
+    }
+
+    #contactLinks h5 {
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    #contactLinks div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #contactLinks div a{
+        color: white;
+    }
+}
