@@ -92,6 +92,7 @@ main {
     }
 }
 
+
 #about {
     width: 100vw;
     height: 70vh;
@@ -100,17 +101,43 @@ main {
     justify-content: center;
     flex-direction: column;
     gap: 50px;
-    font-size: 3vw;
+    font-size: 2vw;
     color: white;
 
     p {
-        width: 50vw;
+        width: 60vw;
         font-size: 2vw;
         font-family: Ubuntu;
-        line-height: 30px;
+        line-height: 40px;
     }
 }
-
+@media screen and (max-width: 830px) {
+    #about { 
+        font-size: 2.4vw;   
+        p {
+            width: 75vw;
+            font-size: 3vw;
+            line-height: 35px;
+        }
+    } 
+}
+@media screen and (max-width: 572px) {
+    #about { 
+        font-size: 3vw;   
+        p {
+            width: 80vw;
+            font-size: 3.7vw;
+            line-height: 28px;
+        }
+    } 
+}
+@media screen and (max-width: 416px) {
+    #about {    
+        p {
+            line-height: 25px;
+        }
+    } 
+}
 #skills {
     width: 100vw;
     height: 80vh;
@@ -148,7 +175,56 @@ main {
     }
 
 }
-
+@media screen and (max-width: 1000px) {
+    #skills {
+        flex-direction: column;
+        gap: 50px;    
+        h2 {
+            font-size: 7vw;
+        }
+    
+        #skillsHeadings {
+            height: 3vw;
+            padding: 0;
+        }
+    
+        #skillsHeadings h2 {
+            display: flex;
+            font-size: 4vw;
+        }  
+    
+    }
+}
+@media screen and (max-width: 600px) {
+    #skills {
+        flex-direction: column;
+        gap: 50px;    
+        h2 {
+            font-size: 8vw;
+        }
+        
+        #skillsHeadings h2 {
+            display: flex;
+            font-size: 5vw;
+        }  
+    
+    }
+}
+@media screen and (max-width: 480px) {
+    #skills {
+        flex-direction: column;
+        gap: 50px;    
+        h2 {
+            font-size: 9vw;
+        }
+        
+        #skillsHeadings h2 {
+            display: flex;
+            font-size: 7vw;
+        }  
+    
+    }
+}
 #projects {
     position: relative;
     width: 100vw;
@@ -190,7 +266,64 @@ main {
         opacity: 0.5;
     }
 }
-
+@media screen and (max-width: 904px){
+    #projects {
+        position: relative;
+        flex-direction: column;
+        margin: 50vh 0;
+    
+        h3 {
+            position: relative;
+            top: 0%;
+            font-size: 7vw;
+        }
+    
+        .card {
+            width: 40vw;
+            height: 80vh;
+            margin: 70px;
+        }    
+        .card a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            background: white;
+            border-radius: 20px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    #projects {
+        position: relative;
+        flex-direction: column;
+        margin: 50vh 0;
+    
+        h3 {
+            position: relative;
+            top: 0%;
+            font-size: 7vw;
+        }
+    
+        .card {
+            width: 40vw;
+            height: 80vh;
+            margin: 70px;
+        }    
+        .card a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            background: white;
+            border-radius: 20px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+    }
+}
 #contact {
     width: 100vw;
     height: 100vh;
@@ -205,11 +338,12 @@ main {
     }
 
     #contactLinks {
-        width: 20vw;
-        height: 20vw;
-        background-color: grey;
-        display: flex;align-items: center;justify-content: center;
-        flex-direction: column; gap: 50px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
     }
 
     #contactLinks h5 {
@@ -224,7 +358,76 @@ main {
         flex-direction: column;
         gap: 10px;
     }
-    #contactLinks div a{
+
+    #contactLinks div a {
         color: white;
+    }
+}
+@media screen and (max-width: 906px){
+    #contact {
+        width: 100vw;
+        height: 200vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        h6 {
+            font-size: 6vw;
+            width: 60vw;
+        }
+    
+        #contactLinks {
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }      
+        #contactLinks h5 {
+            font-size: 3vw;
+            text-align: center;
+        } 
+        
+        #contactLinks div a {
+            color: white;
+            font-size: 3vw;
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    #contact {
+        width: 100vw;
+        height: 200vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        h6 {
+            font-size: 6vw;
+            width: 60vw;
+        }
+    
+        #contactLinks {
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 100px;
+        }      
+        #contactLinks h5 {
+            font-size: 5vw;
+            text-align: center;
+        } 
+        
+        #contactLinks div a {
+            color: white;
+            font-size: 4vw;
+        }
     }
 }
