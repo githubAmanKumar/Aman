@@ -193,7 +193,7 @@ animate();
         }
     }) 
     gsap.from("#projects",{
-        scale:0.8,
+        scale:0.9,
         y:30,
         duration:0.2,
         scrollTrigger:{
