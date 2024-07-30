@@ -221,5 +221,25 @@ animate();
 
 })()
 
+// =====================MouseFollower=======================
+document.addEventListener('mousemove', (e) => {
+    const pointer = document.querySelector('.pointer');
+    pointer.style.left = `${e.pageX}px`;
+    pointer.style.top = `${e.pageY}px`;
 
+    createFlame(e.pageX, e.pageY);
+});
+
+function createFlame(x, y) {
+    const flame = document.createElement('div');
+    flame.classList.add('flame');
+    flame.style.left = `${x}px`;
+    flame.style.top = `${y}px`;
+
+    document.body.appendChild(flame);
+
+    setTimeout(() => {
+        flame.remove();
+    }, 500); // Match the duration of the animation
+}
 
