@@ -61,12 +61,134 @@ main {
         transform: scale(1) translate(0, 0);
         opacity: 0.7;
     }
+
     to {
         transform: scale(0.1) translate(0, -50px);
         opacity: 0;
     }
 }
 
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #080807;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* Ensure the navbar is always on top */
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    /* Smooth transition for hiding/showing */
+}
+.navbar.hidden {
+    transform: translateY(-100%);
+    /* Move navbar up/out of view */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    cursor: initial;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #f5f5dc;
+    font-size: 18px;
+    transition: color 0.4s ease, transform 0.4s ease, padding 0.4s ease;
+    padding: 10px 2px;
+    border-radius: 5px;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: orangered;
+    /* Gold color for underline */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease;
+}
+
+.nav-link:hover {
+    color: orangered;
+    /* Gold color for hover effect */
+    transform: scale(1.1);
+    padding-bottom: 15px;
+    /* Increase padding on hover to accommodate underline */
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    border-bottom: 1px solid black;
+    /* Tan border for sections */
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #080807;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        background-color: orangered;
+        color: #3a2d1f;
+        border: none;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar .menu-toggle {
+        display: none;
+    }
+}
+
+/* Homepage */
 #homepage {
     background-size: 100% 100%;
     color: black;
@@ -327,6 +449,7 @@ main {
 @media screen and (max-width: 724px) {
     #projects {
         height: 350vh;
+
         h2 {
             position: relative;
             top: 0%;
